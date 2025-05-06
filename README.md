@@ -11,3 +11,4 @@ Run ‘npm start’ ( application will open on http://localhost:3000/)
 Go to bin folder and run - >elasticsearch -E xpack.security.enabled=false
 4. Once ES is up and running now run app.py file in a terminal
 Run python app.py (running 5000)
+Run .ipynb file to generate pickle file
