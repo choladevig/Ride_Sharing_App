@@ -1,0 +1,141 @@
+.landing-container {
+  padding: 2rem;
+  max-width: 90%;
+  margin: 2rem auto;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-top: 7%;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+   grid-template-rows:
+    auto    
+    auto     
+    1fr;     
+  grid-template-areas:
+    "search     map"
+    "prediction map"
+    "history    map";
+  gap: 1.5rem;
+  margin-top: 10px;
+}
+
+.search-section     { grid-area: search; }
+.prediction-cards   { grid-area: prediction; }
+.chat-section       { grid-area: chat; }
+.map-container      { grid-area: map; }
+.history-card       { grid-area: history; }
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 1rem;
+}
+
+.search-section {
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+.search-section input {
+  width: 90%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px;
+}
+.search-section button {
+  width: 80%;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: #1ca0f2; color: #fff; border: none; border-radius: 4px;
+  cursor: pointer;
+}
+.search-section button:hover {
+  background: #0e88d0;
+}
+
+.prediction-cards {
+  display: flex; gap: 1rem;
+}
+.prediction-card {
+  flex: 1;
+  color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+.fare-card {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+}
+.eta-card {
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+}
+
+.chat-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.chat-section textarea {
+  width: 100%;
+  height: 120px;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+.chat-section button {
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  background: #805ad5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.chat-section button:hover {
+  background: #6b46c1;
+}
+.chat-response {
+  background: #faf5ff;
+  border: 1px solid #e9d8fd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  max-height: 150px;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.map-container {
+  grid-area: map;        
+  grid-row: 1 / span 3;  
+  width: 100%;
+  height: 95%;
+}
+.map-container #map {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.history-card {
+  overflow-y: auto;
+  max-height: 250px;
+}
+.history-card ul {
+  list-style: none; padding: 0; margin: 0;
+}
+.history-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+.history-card li:last-child {
+  border-bottom: none;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}

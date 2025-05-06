@@ -1,0 +1,35 @@
+/* src/components/Dashboard.css */
+
+.dashboard-container {
+    margin-top: 60px;
+    padding: 20px;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    /* instead of auto-fit, make exactly 2 columns */
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+    align-items: start;
+  }
+  
+  /* optional: on very small screens, drop to one column */
+  @media (max-width: 600px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  
+  .chart-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .chart-card h2 {
+    margin: 0 0 12px;
+    font-size: 1.1rem;
+    color: #333;
+  }
